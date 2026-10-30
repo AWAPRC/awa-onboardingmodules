@@ -1148,6 +1148,35 @@ function renderModule5(state, onComplete, openModal) {
     <div class="module-subtitle">Select your employment type to see your personalized benefits overview.</div>
     <div class="awa-brand-strip"><img src="${THEME.logoSrc}" alt="${THEME.name}" class="awa-brand-logo"><span class="awa-brand-label">${THEME.fullName}</span></div>
 
+    <div class="card">
+      <div class="card-title">Who Gets Which Benefits</div>
+      <p style="font-size:13px;color:#555;margin-bottom:12px;">Your benefits depend on your employment type: Full-Time Salaried, Full-Time Hourly, or Part-Time. Find your type in the table below. Details for each type are in the tabs further down this page.</p>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <thead>
+            <tr style="background:${THEME.primary};color:${THEME.accent};">
+              <th style="text-align:left;padding:8px 10px;">Benefit</th>
+              <th style="text-align:left;padding:8px 10px;">Full-Time Salaried</th>
+              <th style="text-align:left;padding:8px 10px;">Full-Time Hourly</th>
+              <th style="text-align:left;padding:8px 10px;">Part-Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">Medical, dental &amp; vision insurance</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Eligible after 90 days</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Eligible after 90 days</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">❌ Not eligible</td></tr>
+            <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">401(k)</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Eligible after 90 days</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Eligible after 90 days</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">❌ Not eligible</td></tr>
+            <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">Paid Time Off (PTO)</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Starts accruing on hire</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Starts accruing on hire</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">❌ Not eligible. Up to 15 days of unpaid time off per year</td></tr>
+            <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">Birthday floating holiday (8 hours PTO)</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Yes</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Yes</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">❌ Not eligible</td></tr>
+            <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">Holiday pay</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Yes</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Yes</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">Only if scheduled. Hours worked on a holiday are paid at 1.5×. No holiday pay if not scheduled</td></tr>
+            <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">Mental wellness (EAP)</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Available</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Available</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">Ask P&amp;C</td></tr>
+            <tr><td style="padding:8px 10px;font-weight:700;">Pay schedule</td><td colspan="3" style="padding:8px 10px;">Every employee type is paid bi-weekly on Fridays by direct deposit through TriNet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="background:#f0f4ff;border-radius:8px;padding:12px 14px;font-size:12px;color:#444;margin-top:12px;">
+        Benefit enrollment and effective dates are managed through TriNet and People &amp; Culture. Not sure how your eligibility applies? Contact P&amp;C before your 90-day mark.
+      </div>
+    </div>
+
     <div class="benefits-selector">
       <button class="type-btn ${state.employmentType==='ft-salaried'?'active':''}" data-type="ft-salaried">Full-Time Salaried</button>
       <button class="type-btn ${state.employmentType==='ft-hourly'?'active':''}" data-type="ft-hourly">Full-Time Hourly</button>
@@ -2039,6 +2068,42 @@ Violations may result in immediate termination. Employees who voluntarily seek h
     </div>
 
     <div class="card">
+      <div class="card-title">Personnel Files, Required Training &amp; Client Rights</div>
+      <p style="font-size:13px;color:#666;margin-bottom:14px;">These three requirements apply to every ${THEME.name} employee. Read each one and keep it in mind as you complete your trainings and forms.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+
+        <div style="background:#f8f9ff;border-radius:10px;padding:14px 16px;border-left:4px solid ${THEME.primary};">
+          <div style="font-size:13px;font-weight:700;color:${THEME.primary};margin-bottom:6px;">1. Your Personnel File</div>
+          <ul style="margin:0;padding-left:18px;font-size:12px;color:#444;line-height:1.8;">
+            <li>P&amp;C keeps a personnel file for every employee. It includes your hiring documents (application, references, verification of employment history, resume or cover letter, offer letter), tax and payroll forms, and your I-9.</li>
+            <li>It also includes your licenses and certifications, education verification, job description, competency assessments, performance evaluations, and any disciplinary actions.</li>
+            <li>Send P&amp;C every training certificate as soon as you complete it. Certificates must be kept in your personnel file.</li>
+            <li>Health documents, such as drug screen and health screening results, are kept in a separate health file.</li>
+          </ul>
+        </div>
+
+        <div style="background:#f8f9ff;border-radius:10px;padding:14px 16px;border-left:4px solid ${THEME.primary};">
+          <div style="font-size:13px;font-weight:700;color:${THEME.primary};margin-bottom:6px;">2. Required Training</div>
+          <ul style="margin:0;padding-left:18px;font-size:12px;color:#444;line-height:1.8;">
+            <li>Every required training must be completed through an approved provider. Online-only CPR and First Aid courses are not accepted. Use a hands-on course from a recognized provider such as the American Red Cross or American Heart Association.</li>
+            <li>All staff complete trainings on: client rights; confidentiality (HIPAA and 42 CFR Part 2); infection control and bloodborne pathogens; recognizing and reporting abuse, neglect, and exploitation; suicide risk identification; trauma-informed care; workplace violence prevention; de-escalation and alternatives to restrictive interventions; cultural diversity and competency; and overdose prevention with Narcan.</li>
+            <li>Your role may require additional trainings. P&amp;C will confirm which ones apply to you and help you schedule them.</li>
+          </ul>
+        </div>
+
+        <div style="background:#f8f9ff;border-radius:10px;padding:14px 16px;border-left:4px solid ${THEME.primary};">
+          <div style="font-size:13px;font-weight:700;color:${THEME.primary};margin-bottom:6px;">3. Client Rights</div>
+          <ul style="margin:0;padding-left:18px;font-size:12px;color:#444;line-height:1.8;">
+            <li>Every client receives written notice of their rights at admission. Staff must be able to explain those rights if a client asks.</li>
+            <li>Client rights are set by the state where the client is served, so the rights we teach and post follow the state where your facility operates. Your supervisor or P&amp;C will confirm which rules apply to your location.</li>
+            <li>Every employee signs a Client Rights Acknowledgement at hire and completes client rights training upon hire.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
       <div class="card-title">Required Forms & Training — complete all 5 to continue</div>
       <p style="font-size:13px;color:#666;margin-bottom:14px;">Click each link to open the form or training. Once you've completed it, check the box to confirm.</p>
       <div style="display:flex;flex-direction:column;gap:10px;" id="required-forms-list">
@@ -2406,16 +2471,8 @@ function renderModule9(state, onComplete, openModal) {
     { day: 'Day 1', desc: 'Orientation complete · System access set up · Meet your team · TriNet + Outlook configured' },
     { day: 'Day 30', desc: 'Comfortable in your role · All required trainings scheduled or completed · First supervisor check-in' },
     { day: 'Day 45', desc: 'Contributing independently · Raise any HR questions with P&C' },
-    { day: 'Day 90', desc: `Full performance expectations · 90-day review with your supervisor · <strong>Required: Schedule your Day 90 P&C check-in with Rubi</strong> · Benefits eligibility begins · 401(k) eligibility begins` },
+    { day: 'Day 90', desc: `Full performance expectations · 90-day review with your supervisor · Benefits eligibility begins · 401(k) eligibility begins` },
   ];
-
-  state.checkinScheduled = state.checkinScheduled || {};
-
-  const CHECKIN_LINK = 'https://outlook.office.com/bookwithme/user/f90edeaa85404572b5d6153a3f62cc4c@awellnessacademy.com/meetingtype/blJ5AZSMLE65G-WI_-LGdw2?anonymous&ismsaljsauthenabled&ep=mlink';
-
-  function canContinueMod9() {
-    return !!(state.checkinScheduled.day30 && state.checkinScheduled.day90);
-  }
 
   // Build org chart section — AWA has location selector, PRC shows chart directly
   const orgChartSection = isPRC ? `
@@ -2476,48 +2533,12 @@ function renderModule9(state, onComplete, openModal) {
 
     ${orgChartSection}
 
-    <div class="card" style="border-left:4px solid ${THEME.accent};">
-      <div class="card-title">P&C Check-In Meetings — Required</div>
-      <p style="font-size:13px;color:#666;margin-bottom:14px;">You must schedule both P&C check-in meetings before completing orientation. Click the button to open Rubi's calendar, then check the box to confirm you've scheduled it.</p>
-      <div style="display:flex;flex-direction:column;gap:10px;">
-
-        <div style="background:#f8f9ff;border-radius:10px;padding:14px 16px;border:1.5px solid ${state.checkinScheduled.day30 ? '#2e7d32' : '#e8e8e8'};">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px;">
-            <div>
-              <div style="font-size:13px;font-weight:700;color:${THEME.primary};">Day 30 — First P&C Check-In</div>
-              <div style="font-size:11px;color:#666;margin-top:2px;">Schedule before the end of your first month</div>
-            </div>
-            <a href="${CHECKIN_LINK}" target="_blank" rel="noopener" style="background:${THEME.primary};color:${THEME.accent};font-weight:700;font-size:12px;text-decoration:none;padding:8px 14px;border-radius:8px;white-space:nowrap;">Schedule on Outlook →</a>
-          </div>
-          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;font-weight:700;color:${state.checkinScheduled.day30 ? '#2e7d32' : '#555'};">
-            <input type="checkbox" id="checkin-day30" ${state.checkinScheduled.day30 ? 'checked' : ''} style="width:18px;height:18px;accent-color:${THEME.primary};cursor:pointer;">
-            ${state.checkinScheduled.day30 ? '✅ Day 30 check-in scheduled' : 'I have scheduled my Day 30 check-in'}
-          </label>
-        </div>
-
-        <div style="background:#f8f9ff;border-radius:10px;padding:14px 16px;border:1.5px solid ${state.checkinScheduled.day90 ? '#2e7d32' : '#e8e8e8'};">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px;">
-            <div>
-              <div style="font-size:13px;font-weight:700;color:${THEME.primary};">Day 90 — Final P&C Check-In</div>
-              <div style="font-size:11px;color:#666;margin-top:2px;">Schedule around your 90-day mark</div>
-            </div>
-            <a href="${CHECKIN_LINK}" target="_blank" rel="noopener" style="background:${THEME.primary};color:${THEME.accent};font-weight:700;font-size:12px;text-decoration:none;padding:8px 14px;border-radius:8px;white-space:nowrap;">Schedule on Outlook →</a>
-          </div>
-          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;font-weight:700;color:${state.checkinScheduled.day90 ? '#2e7d32' : '#555'};">
-            <input type="checkbox" id="checkin-day90" ${state.checkinScheduled.day90 ? 'checked' : ''} style="width:18px;height:18px;accent-color:${THEME.primary};cursor:pointer;">
-            ${state.checkinScheduled.day90 ? '✅ Day 90 check-in scheduled' : 'I have scheduled my Day 90 check-in'}
-          </label>
-        </div>
-
-      </div>
-    </div>
-
     <div class="reflection-wrap">
       <label>Final Reflection: What are you most excited about in your role at ${companyLabel}?</label>
       <textarea id="final-reflection" placeholder="Share your thoughts...">${state.finalReflection || ''}</textarea>
     </div>
 
-    <button class="continue-btn" id="mod9-continue" ${canContinueMod9() ? '' : 'disabled'}>Complete Orientation & Get Your Certificate →</button>
+    <button class="continue-btn" id="mod9-continue">Complete Orientation & Get Your Certificate →</button>
   `;
 
   // AWA-only: location selector for org chart
@@ -2539,17 +2560,6 @@ function renderModule9(state, onComplete, openModal) {
     // PRC: org chart already rendered, just attach handlers
     attachOrgChartHandlers(openModal);
   }
-
-  function updateCheckinState() {
-    const cb30 = document.getElementById('checkin-day30');
-    const cb90 = document.getElementById('checkin-day90');
-    if (cb30) state.checkinScheduled.day30 = cb30.checked;
-    if (cb90) state.checkinScheduled.day90 = cb90.checked;
-    document.getElementById('mod9-continue').disabled = !canContinueMod9();
-  }
-
-  document.getElementById('checkin-day30').addEventListener('change', updateCheckinState);
-  document.getElementById('checkin-day90').addEventListener('change', updateCheckinState);
 
   document.getElementById('final-reflection').addEventListener('input', e => {
     state.finalReflection = e.target.value;

@@ -314,7 +314,7 @@ body { font-family: 'Lato', sans-serif; background: #f0f2f5; color: #212121; hei
       <div class="progress-track">
         <div class="progress-fill" id="progress-fill" style="width:0%"></div>
       </div>
-      <div class="progress-pct" id="progress-pct">0 of 9 modules complete</div>
+      <div class="progress-pct" id="progress-pct">0 of 8 modules complete</div>
     </div>
 
     <div class="main">
@@ -571,7 +571,7 @@ function renderModule1(state, onComplete, openModal) {
       <div style="font-size:14px;color:#555;line-height:1.7;max-width:480px;margin:0 auto;">We're so glad you're here. This onboarding will walk you through everything you need to know to get started — at your own pace, in your own time.</div>
     </div>
 
-    <div class="module-tag">Module 1 of 9 · Welcome</div>
+    <div class="module-tag">Module 1 of 8 · Welcome</div>
     <div class="module-title">${moduleTitle}</div>
     <div class="module-subtitle">Let's start by getting to know each other. This onboarding is yours — take it at your own pace.</div>
     <div class="awa-brand-strip"><img src="${THEME.logoSrc}" alt="${THEME.name}" class="awa-brand-logo"><span class="awa-brand-label">${THEME.fullName}</span></div>
@@ -768,7 +768,7 @@ function renderModule2(state, onComplete, openModal) {
 
   if (isPRC) {
     content.innerHTML = `
-      <div class="module-tag">Module 2 of 9 · Our Programs</div>
+      <div class="module-tag">Module 2 of 8 · Our Programs</div>
       <div class="module-title">Our Programs</div>
       <div class="module-subtitle">PRC is built for adults ready to change. Here's what we offer, who we serve, and how we help people reclaim their lives.</div>
       <div class="awa-brand-strip"><img src="${THEME.logoSrc}" alt="${THEME.name}" class="awa-brand-logo"><span class="awa-brand-label">${THEME.fullName}</span></div>
@@ -819,7 +819,7 @@ function renderModule2(state, onComplete, openModal) {
     `;
   } else {
     content.innerHTML = `
-      <div class="module-tag">Module 2 of 9 · Our Programs</div>
+      <div class="module-tag">Module 2 of 8 · Our Programs</div>
       <div class="module-title">Our Programs</div>
       <div class="module-subtitle">AWA is one of the few programs in South Florida built exclusively for adolescents. Here's what we offer and how we help.</div>
       <div class="awa-brand-strip"><img src="${THEME.logoSrc}" alt="${THEME.name}" class="awa-brand-logo"><span class="awa-brand-label">${THEME.fullName}</span></div>
@@ -1079,7 +1079,7 @@ function renderModule4(state, onComplete, openModal) {
   const partnershipTitle = isPRC ? 'Your Success at PRC' : 'Your Success at AWA';
 
   content.innerHTML = `
-    <div class="module-tag">Module 4 of 9 · Your Role</div>
+    <div class="module-tag">Module 4 of 8 · Your Role</div>
     <div class="module-title">Your Role at ${companyLabel}</div>
     <div class="module-subtitle">Click any job title below to flip the card and see a role summary.</div>
     <div class="awa-brand-strip"><img src="${THEME.logoSrc}" alt="${THEME.name}" class="awa-brand-logo"><span class="awa-brand-label">${THEME.fullName}</span></div>
@@ -1127,7 +1127,7 @@ function renderModule5(state, onComplete, openModal) {
     },
     {
       q: 'Where do you submit time-off requests?',
-      options: ['SharePoint', 'KIPU', 'TriNet → Time Off → Request Time Off', 'Outlook'],
+      options: ['SharePoint', 'KIPU', 'Paylocity', 'Outlook'],
       correct: 2,
     },
     {
@@ -1137,13 +1137,13 @@ function renderModule5(state, onComplete, openModal) {
     },
     {
       q: 'Which of the following benefits is available ONLY to full-time employees?',
-      options: ['TriNet access', 'Direct deposit', 'Medical, dental & vision insurance', 'Pay stubs'],
+      options: ['Accrued PTO balance', 'Direct deposit', 'Medical, dental & vision insurance', 'Pay stubs'],
       correct: 2,
     },
   ];
 
   content.innerHTML = `
-    <div class="module-tag">Module 5 of 9 · Your Benefits</div>
+    <div class="module-tag">Module 5 of 8 · Your Benefits</div>
     <div class="module-title">Your Benefits</div>
     <div class="module-subtitle">Select your employment type to see your personalized benefits overview.</div>
     <div class="awa-brand-strip"><img src="${THEME.logoSrc}" alt="${THEME.name}" class="awa-brand-logo"><span class="awa-brand-label">${THEME.fullName}</span></div>
@@ -1164,17 +1164,46 @@ function renderModule5(state, onComplete, openModal) {
           <tbody>
             <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">Medical, dental &amp; vision insurance</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Eligible after 90 days</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Eligible after 90 days</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">❌ Not eligible</td></tr>
             <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">401(k)</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Eligible after 90 days</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Eligible after 90 days</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">❌ Not eligible</td></tr>
-            <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">Paid Time Off (PTO)</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Starts accruing on hire</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Starts accruing on hire</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">❌ Not eligible. Up to 15 days of unpaid time off per year</td></tr>
-            <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">Birthday floating holiday (8 hours PTO)</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Yes</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Yes</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">❌ Not eligible</td></tr>
-            <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">Holiday pay</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Yes</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Yes</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">Only if scheduled. Hours worked on a holiday are paid at 1.5×. No holiday pay if not scheduled</td></tr>
+            <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">Paid Time Off (PTO)</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Accrues from hire; usable after 90 days</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Accrues from hire; usable after 90 days</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">❌ Not eligible. Up to 15 days of unpaid time off per year</td></tr>
+            <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">Birthday floating holiday (8 hours PTO)</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ After 90 days</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ After 90 days</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">❌ Not eligible</td></tr>
+            <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">Holiday pay</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Yes</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Yes</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">Holiday pay applies only when the holiday is actually worked. Hours worked on a holiday are paid at 1.5×</td></tr>
             <tr><td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:700;">Mental wellness (EAP)</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Available</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">✅ Available</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">Ask P&amp;C</td></tr>
-            <tr><td style="padding:8px 10px;font-weight:700;">Pay schedule</td><td colspan="3" style="padding:8px 10px;">Every employee type is paid bi-weekly on Fridays by direct deposit through TriNet.</td></tr>
+            <tr><td style="padding:8px 10px;font-weight:700;">Paid sick time (Arizona)</td><td colspan="2" style="padding:8px 10px;border-bottom:1px solid #eee;">Full-time: included in your PTO balance</td><td style="padding:8px 10px;border-bottom:1px solid #eee;">Arizona part-time only: 1 hour of paid sick time per 30 hours worked, up to 40 hours per year</td></tr>
+            <tr><td style="padding:8px 10px;font-weight:700;">Pay schedule</td><td colspan="3" style="padding:8px 10px;">Every employee type is paid bi-weekly on Fridays by direct deposit.</td></tr>
           </tbody>
         </table>
       </div>
       <div style="background:#f0f4ff;border-radius:8px;padding:12px 14px;font-size:12px;color:#444;margin-top:12px;">
-        Benefit enrollment and effective dates are managed through TriNet and People &amp; Culture. Not sure how your eligibility applies? Contact P&amp;C before your 90-day mark.
+        Benefit enrollment and effective dates are managed through People &amp; Culture. Not sure how your eligibility applies? Contact P&amp;C before your 90-day mark.
       </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Out-of-Office (OOO) Procedures</div>
+      <p style="font-size:13px;color:#555;margin-bottom:8px;">Follow these steps every time you are away from work. Your supervisor and team rely on them to keep clients and work covered.</p>
+      <div style="background:#fff8e1;border-radius:8px;padding:10px 14px;font-size:12px;color:#444;margin-bottom:6px;">
+        <strong>Both steps are required.</strong> A time-off request alone is not enough, and an OOO message alone is not enough. Missing either one is flagged in the weekly OOO review.
+      </div>
+        <div style="font-size:13px;font-weight:700;margin:12px 0 6px;">Planned time off</div>
+          <ol style="margin:0;padding-left:20px;font-size:12px;color:#444;line-height:1.8;">
+            <li>Submit your time-off request in Paylocity (Time Off → Request Time Off) at least 2 weeks in advance, and get your supervisor's approval. Requests stay pending until they are approved.</li>
+            <li>Set your Outlook out-of-office auto-reply before your last workday. Include your first and last day out, your return date, and who is covering your work.</li>
+            <li>Send your OOO message by email or Teams to your supervisor and team, so it is on record.</li>
+            <li>Arrange coverage for your clients and open tasks with your supervisor before you leave.</li>
+            <li>Check that your request shows as approved. If your dates change, update P&amp;C right away.</li>
+          </ol>
+        <div style="font-size:13px;font-weight:700;margin:12px 0 6px;">Unplanned absence (sick or emergency)</div>
+          <ol style="margin:0;padding-left:20px;font-size:12px;color:#444;line-height:1.8;">
+            <li>Contact your supervisor as soon as possible, before your shift starts when you can.</li>
+            <li>Turn on your Outlook out-of-office auto-reply, and send your OOO message by email or Teams.</li>
+            <li>Submit the time off in Paylocity on your first day back, and make sure it is approved.</li>
+            <li>Full-time employees: unscheduled absences are automatically applied to your PTO balance.</li>
+          </ol>
+        <div style="font-size:13px;font-weight:700;margin:12px 0 6px;">Returning to work</div>
+          <ol style="margin:0;padding-left:20px;font-size:12px;color:#444;line-height:1.8;">
+            <li>Turn off your out-of-office auto-reply on your first day back.</li>
+            <li>Confirm with your supervisor that you are back and that any coverage handoff is complete.</li>
+          </ol>
     </div>
 
     <div class="benefits-selector">
@@ -1188,7 +1217,7 @@ function renderModule5(state, onComplete, openModal) {
 
       <div class="card">
         <div class="card-title">Benefits Overview — Full-Time Salaried</div>
-        <p style="font-size:13px;color:#555;margin-bottom:16px;">As a full-time salaried employee you are eligible for the following benefits. Enrollment windows and effective dates are managed through TriNet and your P&C team.</p>
+        <p style="font-size:13px;color:#555;margin-bottom:16px;">As a full-time salaried employee you are eligible for the following benefits. Enrollment windows and effective dates are managed through your P&C team.</p>
 
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:18px;">
           <div style="background:${THEME.accentBg};border-radius:10px;padding:14px;text-align:center;border-top:3px solid ${THEME.primary};">
@@ -1254,7 +1283,7 @@ function renderModule5(state, onComplete, openModal) {
           <div style="border-left:4px solid ${THEME.primary};background:${THEME.accentBg};border-radius:0 8px 8px 0;padding:12px 14px;">
             <div style="font-size:13px;font-weight:700;color:${THEME.primary};margin-bottom:6px;">How to Request Time Off</div>
             <ul style="margin:0;padding-left:18px;font-size:12px;color:#444;line-height:1.8;">
-              <li>Submit all requests in <strong>TriNet → Time Off → Request Time Off</strong></li>
+              <li>Submit all requests in <strong>Paylocity</strong></li>
               <li>Requests must be submitted <strong>at least 2 weeks in advance</strong></li>
               <li>PTO is effective only <strong>after approval by your direct supervisor</strong></li>
               <li>Time off is not guaranteed — it is subject to operational needs</li>
@@ -1295,13 +1324,14 @@ function renderModule5(state, onComplete, openModal) {
             <div style="font-size:13px;font-weight:700;color:${THEME.primary};margin-bottom:6px;">Working on a Holiday</div>
             <ul style="margin:0;padding-left:18px;font-size:12px;color:#444;line-height:1.8;">
               <li><strong>Full-time salaried:</strong> Receive one additional PTO day</li>
-              <li><strong>Full-time hourly:</strong> 0.5× regular rate for hours worked + 8 hours holiday pay</li>
+              <li><strong>Full-time hourly:</strong> 8 hours of holiday pay and incentive pay for hours worked</li>
+              <li>Team shares responsibility for holiday coverage</li>
             </ul>
           </div>
 
           <div style="background:${THEME.accentBg};border-radius:8px;padding:12px 14px;">
             <div style="font-size:13px;font-weight:700;color:${THEME.primary};margin-bottom:6px;">Birthday Floating Holiday</div>
-            <p style="margin:0;font-size:12px;color:#444;line-height:1.6;">Full-time employees receive <strong>8 hours of PTO</strong> as a floating holiday for their birthday. Schedule it through TriNet. This credit does not roll over.</p>
+            <p style="margin:0;font-size:12px;color:#444;line-height:1.6;">Full-time employees receive <strong>8 hours of PTO</strong> as a floating holiday for their birthday. It is usable after the 90-day introductory period. Schedule it in Paylocity. This credit does not roll over.</p>
           </div>
         </div>
       </div>
@@ -1348,7 +1378,7 @@ function renderModule5(state, onComplete, openModal) {
 
       <div class="card">
         <div class="card-title">Benefits Overview — Full-Time Hourly</div>
-        <p style="font-size:13px;color:#555;margin-bottom:16px;">As a full-time hourly employee you are eligible for the following benefits. Enrollment windows and effective dates are managed through TriNet and your P&C team.</p>
+        <p style="font-size:13px;color:#555;margin-bottom:16px;">As a full-time hourly employee you are eligible for the following benefits. Enrollment windows and effective dates are managed through your P&C team.</p>
 
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:18px;">
           <div style="background:${THEME.accentBg};border-radius:10px;padding:14px;text-align:center;border-top:3px solid ${THEME.primary};">
@@ -1414,7 +1444,7 @@ function renderModule5(state, onComplete, openModal) {
           <div style="border-left:4px solid ${THEME.primary};background:${THEME.accentBg};border-radius:0 8px 8px 0;padding:12px 14px;">
             <div style="font-size:13px;font-weight:700;color:${THEME.primary};margin-bottom:6px;">How to Request Time Off</div>
             <ul style="margin:0;padding-left:18px;font-size:12px;color:#444;line-height:1.8;">
-              <li>Submit all requests in <strong>TriNet → Time Off → Request Time Off</strong></li>
+              <li>Submit all requests in <strong>Paylocity</strong></li>
               <li>Requests must be submitted <strong>at least 2 weeks in advance</strong></li>
               <li>PTO is effective only <strong>after approval by your direct supervisor</strong></li>
               <li>Time off is not guaranteed — it is subject to operational needs</li>
@@ -1454,13 +1484,14 @@ function renderModule5(state, onComplete, openModal) {
           <div style="background:${THEME.accentBg};border-radius:8px;padding:12px 14px;">
             <div style="font-size:13px;font-weight:700;color:${THEME.primary};margin-bottom:6px;">Working on a Holiday</div>
             <ul style="margin:0;padding-left:18px;font-size:12px;color:#444;line-height:1.8;">
-              <li><strong>Full-time hourly:</strong> 0.5× regular rate for hours worked + 8 hours holiday pay</li>
+              <li><strong>Full-time hourly:</strong> 8 hours of holiday pay and incentive pay for hours worked</li>
+              <li>Team shares responsibility for holiday coverage</li>
             </ul>
           </div>
 
           <div style="background:${THEME.accentBg};border-radius:8px;padding:12px 14px;">
             <div style="font-size:13px;font-weight:700;color:${THEME.primary};margin-bottom:6px;">Birthday Floating Holiday</div>
-            <p style="margin:0;font-size:12px;color:#444;line-height:1.6;">Full-time employees receive <strong>8 hours of PTO</strong> as a floating holiday for their birthday. Schedule it through TriNet. This credit does not roll over.</p>
+            <p style="margin:0;font-size:12px;color:#444;line-height:1.6;">Full-time employees receive <strong>8 hours of PTO</strong> as a floating holiday for their birthday. It is usable after the 90-day introductory period. Schedule it in Paylocity. This credit does not roll over.</p>
           </div>
         </div>
       </div>
@@ -1512,7 +1543,7 @@ function renderModule5(state, onComplete, openModal) {
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
           <div class="info-box"><strong>Pay Schedule</strong><br>Bi-weekly on Fridays via direct deposit. Time tracking required.</div>
-          <div class="info-box"><strong>TriNet</strong><br>Manage your payroll and time tracking in TriNet. Access provided Day 1.</div>
+          <div class="info-box"><strong>Arizona Sick Time</strong><br>Arizona part-time employees earn 1 hour of paid sick time per 30 hours worked, up to 40 hours per year.</div>
         </div>
       </div>
 
@@ -1525,7 +1556,7 @@ function renderModule5(state, onComplete, openModal) {
             <div style="font-size:13px;font-weight:700;color:${THEME.primary};margin-bottom:6px;">Unpaid Time Off</div>
             <ul style="margin:0;padding-left:18px;font-size:12px;color:#444;line-height:1.8;">
               <li>Part-time employees may request up to <strong>15 days of unpaid time off</strong> per year</li>
-              <li>Requests must be submitted in <strong>TriNet → Time Off → Request Time Off</strong></li>
+              <li>Requests must be submitted in <strong>Paylocity</strong></li>
               <li>Requests should be submitted at least <strong>2 weeks in advance</strong></li>
               <li>Time off is subject to approval by your direct supervisor and operational needs</li>
             </ul>
@@ -1534,7 +1565,7 @@ function renderModule5(state, onComplete, openModal) {
           <div style="border-left:4px solid ${THEME.primary};background:${THEME.accentBg};border-radius:0 8px 8px 0;padding:12px 14px;">
             <div style="font-size:13px;font-weight:700;color:${THEME.primary};margin-bottom:6px;">Holidays</div>
             <ul style="margin:0;padding-left:18px;font-size:12px;color:#444;line-height:1.8;">
-              <li>Part-time hourly employees receive <strong>no holiday pay</strong> if not scheduled to work</li>
+              <li>Part-time employees receive <strong>holiday pay only when the holiday is actually worked</strong></li>
               <li>If scheduled and you work on a holiday: <strong>1.5× regular rate</strong> for hours worked</li>
             </ul>
           </div>
@@ -1665,8 +1696,8 @@ const POLICY_SLIDES = {
   'Client Grievance Rights': [
     { icon: '📢', headline: 'Every client has the right to grieve', points: ['At any time, verbally or in writing', 'No fear of retaliation or impact on care', 'Any staff member can receive a grievance'] },
     { icon: '👂', headline: 'All staff must forward grievances', points: ['Forward immediately to the Clinical Director or P&C', 'Do not try to resolve it yourself without escalating', 'Clients receive grievance rights info on admission'] },
-    { icon: '⏱️', headline: 'AWA must respond in writing', points: ['Acknowledge receipt within 5 days', 'Provide a written resolution within 30 days', 'All grievances are tracked and reviewed'] },
-    { icon: '↗️', headline: 'Clients can escalate externally', points: ['Joint Commission: 630-792-5800', 'AHCA: 888-419-3456 · DCF: 1-866-762-2237', 'AWA cannot interfere with external complaint rights'] },
+    { icon: '⏱️', headline: 'AWA must respond in writing', points: ['Acknowledge receipt within the required timeframe', 'Provide a written resolution within the required timeframe (Florida Rule 65D-30.0045)', 'All grievances are tracked and reviewed'] },
+    { icon: '↗️', headline: 'Clients can escalate externally', points: ['Joint Commission: 800-994-6610', 'AHCA: 888-419-3456', 'AWA cannot interfere with external complaint rights'] },
   ],
   'ADA & Accommodations': [
     { icon: '🤝', headline: 'Every employee deserves a fair workplace', points: ['AWA provides reasonable accommodations under the ADA', 'Applies to employees with physical and mental health conditions', 'Florida law provides additional protections'] },
@@ -1995,8 +2026,6 @@ function renderModule6(state, onComplete, openModal) {
   ];
 
   const upcomingTrainings = [
-    { label: 'Bayside Ethics & Compliance Training', deadline: 'Complete within first 2 weeks', desc: 'Online compliance training covering ethics, workplace conduct, and AWA-specific policies.' },
-    { label: 'CPR / First Aid Certification', deadline: 'Complete within first 30 days', desc: 'Hands-on certification required for all staff. P&C will schedule your session.' },
     { label: 'CLIA Waiver / Lab Training (if applicable)', deadline: 'Complete within first 30 days', desc: 'Required for roles that handle lab or clinical documentation.' },
     { label: 'Infectious Disease Prevention Training', deadline: 'Complete within first 2 weeks', desc: 'Covers infection control protocols and prevention procedures at AWA facilities.' },
     { label: 'NARCAN / Naloxone Training', deadline: 'Complete within first 2 weeks', desc: 'Required training on recognizing overdose and administering Naloxone.' },
@@ -2005,9 +2034,7 @@ function renderModule6(state, onComplete, openModal) {
   const requiredForms = [
     { id: 'rf-health', label: 'Health History Screening', url: 'https://www.jotform.com/sign/250374723952056/invite/01jw400kqp17161daede782b25' },
     { id: 'rf-survey', label: 'New Hire Experience Survey', url: 'https://form.jotform.com/251126273176151' },
-    { id: 'rf-cpr', label: 'CPR Training', url: 'https://nationalcprfoundation.com/groups/signup/?keycode=19924&gid=10175&vc=NXwtpWqZxK&start=1' },
     { id: 'rf-background', label: 'Background Verification', url: 'https://www.jotform.com/sign/261044389454057/invite/01kp8s770n645d9764660261e2' },
-    { id: 'rf-onboarding-ack', label: 'Onboarding Acknowledgement', url: 'https://form.jotform.com/251444363059154' },
   ];
 
   const policies = [
@@ -2041,14 +2068,14 @@ Violations may result in immediate termination. Employees who voluntarily seek h
     { title: 'Restraint & Seclusion — Behavioral Health', body: 'AWA follows Joint Commission standards on restraint and seclusion. Physical restraint and seclusion are used only as a last resort when a client presents an imminent danger to themselves or others, and only by trained staff. Any use of restraint or seclusion must be documented immediately, reported to the clinical director, and followed up with a debriefing within 24 hours. Restraints may never be used for punishment, staff convenience, or as a substitute for programming. All staff must complete required de-escalation training before working independently with clients.' },
     { title: 'Suicide Risk Assessment & Safety Planning', body: 'AWA follows Joint Commission National Patient Safety Goal NPSG.15.01.01 for suicide risk. All clinical staff must complete a structured suicide risk assessment using an approved tool at admission and at each clinically significant change. Clients identified as at risk require a written Safety Plan developed collaboratively with the client. Safety plans must be documented in KIPU and reviewed with the client regularly. Staff who are not clinical must immediately report any client expression of suicidal ideation to a licensed clinician on duty. Means restriction counseling must be provided to clients and families.' },
     { title: 'Emergency Preparedness', body: 'Every AWA facility has an Emergency Operations Plan (EOP) covering fire, weather emergencies, power outages, facility lockdown, and mass casualty events. All employees must know their facility\'s evacuation routes and assembly points. Fire drills are conducted regularly — participation is mandatory. In any emergency: ensure client safety first, evacuate or shelter-in-place as directed, account for all clients and staff, and call 911 if there is immediate danger. Do not use elevators during fire evacuations. Your supervisor will brief you on facility-specific emergency procedures during your first week.' },
-    { title: 'Client Grievance Rights', body: 'Every client has the right to file a grievance at any time without fear of retaliation or impact on their care. Grievances may be submitted verbally or in writing to any staff member, who must immediately forward them to the Clinical Director or P&C. AWA must acknowledge receipt within 5 days and provide a written resolution within 30 days. Unresolved grievances may be escalated to the Joint Commission (630-792-5800), AHCA (888-419-3456), or DCF (1-866-762-2237). Clients must receive information about their grievance rights upon admission.' },
+    { title: 'Client Grievance Rights', body: 'Every client has the right to file a grievance at any time without fear of retaliation or impact on their care. Grievances may be submitted verbally or in writing to any staff member, who must immediately forward them to the Clinical Director or P&C. AWA acknowledges receipt and provides a written resolution within the timeframes required by Florida Rule 65D-30.0045 and our grievance procedure. Unresolved grievances may be escalated to the Joint Commission (800-994-6610) or AHCA (888-419-3456). Clients must receive information about their grievance rights upon admission.' },
     { title: 'ADA & Accommodations', body: 'AWA provides reasonable accommodations for employees with disabilities in accordance with the Americans with Disabilities Act (ADA) and Florida law. To request an accommodation, contact People & Culture — requests are handled confidentially. Mental health professionals must also report to P&C any personal condition that may impair their ability to safely provide client care or meet ethical practice standards. Retaliation for requesting accommodations is prohibited.' },
     { title: 'Employee Image Consent', body: 'By accepting employment at AWA, you consent to being photographed, recorded, or otherwise captured — including your likeness, voice, or image — for professional marketing and communications purposes. This may include use on social media, the AWA website, brochures, training materials, and internal communications. Participation in specific photo or video sessions is voluntary. If you wish to revoke or limit this consent, contact People & Culture in writing.' },
     { title: 'Company Property & Return', body: 'All company property issued to you — including keys, access cards, computers, mobile devices (phones, iPads), company credit cards, and branded apparel — remains the property of AWA and must be returned upon separation from employment, regardless of the reason for separation. Confidentiality and non-solicitation obligations continue after your last day. Report any lost or damaged company property to your supervisor immediately. Failure to return property may result in deductions from your final paycheck as permitted by applicable law.' },
   ];
 
   content.innerHTML = `
-    <div class="module-tag">Module 6 of 9 · Our Policies</div>
+    <div class="module-tag">Module 6 of 8 · Our Policies</div>
     <div class="module-title">Our Policies</div>
     <div class="module-subtitle">Review the required policies, complete all required forms, and pass the knowledge check to continue.</div>
     <div class="awa-brand-strip"><img src="${THEME.logoSrc}" alt="${THEME.name}" class="awa-brand-logo"><span class="awa-brand-label">${THEME.fullName}</span></div>
@@ -2078,6 +2105,7 @@ Violations may result in immediate termination. Employees who voluntarily seek h
             <li>P&amp;C keeps a personnel file for every employee. It includes your hiring documents (application, references, verification of employment history, resume or cover letter, offer letter), tax and payroll forms, and your I-9.</li>
             <li>It also includes your licenses and certifications, education verification, job description, competency assessments, performance evaluations, and any disciplinary actions.</li>
             <li>Send P&amp;C every training certificate as soon as you complete it. Certificates must be kept in your personnel file.</li>
+            <li>Every employee signs the General Policy Manual at onboarding. It includes the Client Rights Policy, Code of Ethics, Conflict of Interest Policy, and Client Confidentiality Acknowledgment.</li>
             <li>Health documents, such as drug screen and health screening results, are kept in a separate health file.</li>
           </ul>
         </div>
@@ -2085,7 +2113,10 @@ Violations may result in immediate termination. Employees who voluntarily seek h
         <div style="background:#f8f9ff;border-radius:10px;padding:14px 16px;border-left:4px solid ${THEME.primary};">
           <div style="font-size:13px;font-weight:700;color:${THEME.primary};margin-bottom:6px;">2. Required Training</div>
           <ul style="margin:0;padding-left:18px;font-size:12px;color:#444;line-height:1.8;">
-            <li>Every required training must be completed through an approved provider. Online-only CPR and First Aid courses are not accepted. Use a hands-on course from a recognized provider such as the American Red Cross or American Heart Association.</li>
+            <li>Every required training must be completed through an approved provider. Courses are on the Ethos training site (ethostraining.thinkific.com).</li>
+            <li>Courses required for all staff: Affirmative Duty, Title V and Whistleblower Protections; Aggression Control and Verbal De-escalation*; Client Rights and Grievance Procedure*; Confidentiality, HIPAA and 42 CFR Part 2*; Cultural Diversity, Sensitivity and Competency; Disaster Preparedness in Mental Health and Substance Use Disorder Treatment Settings*; Safety Awareness: Fire Prevention and Life Safety*; HIV/AIDS, TB and STDs*; Incident Reporting and Affirmative Duty; Infection Control in Behavioral Healthcare Settings (annual for residential settings); Overdose Prevention and Narcan Administration*; Recognizing and Reporting Abuse, Neglect and Exploitation; Suicide Prevention; Trauma Informed Care; Workplace Violence*.</li>
+            <li>* means the course must be repeated every year.</li>
+            <li>Each course has a post-test. You must score at least 80% before your completion certificate is issued. When you finish all courses, email every certificate to your supervisor, and send a copy to P&amp;C.</li>
             <li>All staff complete trainings on: client rights; confidentiality (HIPAA and 42 CFR Part 2); infection control and bloodborne pathogens; recognizing and reporting abuse, neglect, and exploitation; suicide risk identification; trauma-informed care; workplace violence prevention; de-escalation and alternatives to restrictive interventions; cultural diversity and competency; and overdose prevention with Narcan.</li>
             <li>Your role may require additional trainings. P&amp;C will confirm which ones apply to you and help you schedule them.</li>
           </ul>
@@ -2096,7 +2127,7 @@ Violations may result in immediate termination. Employees who voluntarily seek h
           <ul style="margin:0;padding-left:18px;font-size:12px;color:#444;line-height:1.8;">
             <li>Every client receives written notice of their rights at admission. Staff must be able to explain those rights if a client asks.</li>
             <li>Client rights are set by the state where the client is served, so the rights we teach and post follow the state where your facility operates. Your supervisor or P&amp;C will confirm which rules apply to your location.</li>
-            <li>Every employee signs a Client Rights Acknowledgement at hire and completes client rights training upon hire.</li>
+            <li>Every employee signs the Client Rights Policy as part of the General Policy Manual at hire, and completes client rights training upon hire.</li>
           </ul>
         </div>
 
@@ -2104,7 +2135,7 @@ Violations may result in immediate termination. Employees who voluntarily seek h
     </div>
 
     <div class="card">
-      <div class="card-title">Required Forms & Training — complete all 5 to continue</div>
+      <div class="card-title">Required Forms & Training — complete all 3 to continue</div>
       <p style="font-size:13px;color:#666;margin-bottom:14px;">Click each link to open the form or training. Once you've completed it, check the box to confirm.</p>
       <div style="display:flex;flex-direction:column;gap:10px;" id="required-forms-list">
         ${requiredForms.map(f => `
@@ -2242,7 +2273,6 @@ function renderModule7(state, onComplete, openModal) {
   const content = document.getElementById('content');
 
   const tools = [
-    { name: 'TriNet', tag: 'HR & Payroll', url: 'https://www.trinet.com', use: 'Where you access your paystubs, submit time off requests, and manage your HR profile. You\'ll set this up on Day 1.' },
     { name: 'KIPU', tag: 'Clinical EHR', url: 'https://kipuhealth.com', use: 'Electronic Health Records system. Clinical staff use KIPU to document sessions, treatment plans, and progress notes. Access is role-based.' },
     { name: 'Greenspace', tag: 'Outcome Measures', url: 'https://app.greenspacehealth.com', use: 'Client outcome measurement tool. Tracks progress over time. Clinical and ops staff may use this depending on your role.' },
     { name: 'DAZOS', tag: 'Admissions CRM', url: 'https://dazos.com/dazos-login/', use: 'CRM used by the admissions team to manage referrals, leads, and intake pipeline. Admissions staff use this daily.' },
@@ -2271,7 +2301,7 @@ function renderModule7(state, onComplete, openModal) {
     </div>
 
     <div class="info-box">
-      <strong>Payday reminder:</strong> Pay periods are bi-weekly, paid on Fridays via direct deposit. Set up your direct deposit in TriNet on Day 1 to avoid delays.
+      <strong>Payday reminder:</strong> Pay periods are bi-weekly, paid on Fridays via direct deposit. Set up your direct deposit with P&amp;C on Day 1 to avoid delays.
     </div>
 
     <div class="card">
@@ -2279,7 +2309,6 @@ function renderModule7(state, onComplete, openModal) {
       <p style="font-size:13px;color:#666;margin-bottom:14px;">Before you finish this module, check that you have access to each system below. If you're missing access, reach out to P&C.</p>
       <div style="display:flex;flex-direction:column;gap:8px;" id="access-checklist">
         ${[
-          { id: 'acc-trinet',     label: 'TriNet',               url: 'https://www.trinet.com',                          note: 'HR, payroll & benefits — set up on Day 1' },
           { id: 'acc-email',      label: 'AWA Outlook Email',     url: 'https://outlook.office.com',                      note: 'Your @awellnessacademy.com email is active' },
           { id: 'acc-teams',      label: 'Microsoft Teams',       url: 'https://teams.microsoft.com',                     note: 'Can log in and see your team channels' },
           { id: 'acc-sp',         label: 'SharePoint',            url: 'https://principlesrecovery.sharepoint.com',       note: 'Can access AWA internal documents' },
@@ -2300,7 +2329,7 @@ function renderModule7(state, onComplete, openModal) {
       <div id="access-status" style="font-size:12px;color:#888;margin-top:12px;"></div>
     </div>
 
-    <button class="continue-btn" id="mod7-continue">Continue to Your TriNet Profile →</button>
+    <button class="continue-btn" id="mod7-continue">Continue to Your Journey →</button>
   `;
 
   function updateAccessStatus() {
@@ -2318,157 +2347,13 @@ function renderModule7(state, onComplete, openModal) {
 
 </script>
   <script>
-function renderModule8(state, onComplete, openModal) {
-  const content = document.getElementById('content');
-
-  state.trinetChecks = state.trinetChecks || {};
-  state.docChecks = state.docChecks || {};
-
-  const setupSteps = [
-    {
-      id: 'tn-login',
-      title: 'Log in to TriNet',
-      desc: 'Go to trinet.com and sign in with the credentials P&C provided on Day 1. If you haven\'t received your login, contact P&C immediately.',
-    },
-    {
-      id: 'tn-profile',
-      title: 'Complete your personal profile',
-      desc: 'Update your legal name, address, date of birth, and contact information under My Profile. This information is used for payroll and benefits.',
-    },
-    {
-      id: 'tn-direct-deposit',
-      title: 'Set up direct deposit',
-      desc: 'Go to Pay > Direct Deposit and add your bank account. This must be done before your first pay period to avoid a paper check delay.',
-    },
-    {
-      id: 'tn-w4',
-      title: 'Complete your W-4 (federal tax)',
-      desc: 'Go to Pay > Tax Withholding and complete your federal W-4. This determines how much federal income tax is withheld from each paycheck.',
-    },
-    {
-      id: 'tn-state-tax',
-      title: 'Complete your state tax form',
-      desc: 'Complete your Florida state tax withholding form in the same Tax Withholding section.',
-    },
-    {
-      id: 'tn-emergency',
-      title: 'Add an emergency contact',
-      desc: 'Under My Profile > Emergency Contacts, add at least one person AWA can reach in the event of an emergency.',
-    },
-    {
-      id: 'tn-benefits',
-      title: 'Review benefits eligibility (after 90 days)',
-      desc: 'Full-time employees become eligible for health, dental, and vision insurance after 90 days. Benefits enrollment is handled outside of TriNet — contact P&C for enrollment details at your 90-day mark.',
-    },
-    {
-      id: 'tn-401k',
-      title: 'Review 401(k) enrollment (after 90 days)',
-      desc: 'After your 90-day mark you\'ll be eligible for the 401(k). You\'ll receive a notification in TriNet — review your contribution options at that time.',
-    },
-  ];
-
-  const docUploads = [
-    { id: 'doc-id',        label: 'Government-issued photo ID',          note: 'Driver\'s license, passport, or state ID — required for I-9 verification' },
-    { id: 'doc-ss',        label: 'Social Security card (copy)',          note: 'Required for I-9 — must be original or certified copy' },
-    { id: 'doc-license',   label: 'Professional license (if applicable)', note: 'e.g. LCSW, CAP, RN, NP — upload under your profile → Documents in TriNet' },
-    { id: 'doc-education', label: 'Highest education diploma/transcript (if applicable)', note: 'Required for licensed clinical roles' },
-    { id: 'doc-cpr',       label: 'CPR/First Aid card (once completed)',  note: 'Upload after completing your CPR certification' },
-  ];
-
-  content.innerHTML = `
-    <div class="module-tag">Module 8 of 9 · Your TriNet Profile</div>
-    <div class="module-title">Setting Up Your TriNet Profile</div>
-    <div class="module-subtitle">TriNet is your HR home base — payroll, benefits, and tax forms all live here. Complete these steps in order during your first week.</div>
-
-    <div class="card" style="background:${THEME.primary};border:none;">
-      <div style="display:flex;align-items:center;gap:14px;">
-        <img src="data:image/png;base64,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" alt="AWA" style="height:36px;width:auto;filter:brightness(0) invert(1);">
-        <div>
-          <div style="font-size:13px;font-weight:700;color:${THEME.accent};margin-bottom:2px;">TriNet — trinet.com</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.75);">Log in with the credentials P&C provided. Questions? Reach out to P&C any time.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">TriNet Setup Checklist — complete each step</div>
-      <p style="font-size:13px;color:#666;margin-bottom:14px;">Check each item once you've completed it in TriNet.</p>
-      <div style="display:flex;flex-direction:column;gap:8px;" id="trinet-checklist">
-        ${setupSteps.map(s => `
-          <div style="background:white;border:1px solid #e8e8e8;border-radius:10px;padding:14px 16px;display:flex;align-items:flex-start;gap:14px;" id="tn-row-${s.id}">
-            <input type="checkbox" id="${s.id}" ${state.trinetChecks[s.id] ? 'checked' : ''} style="width:18px;height:18px;accent-color:${THEME.primary};flex-shrink:0;margin-top:2px;cursor:pointer;">
-            <div>
-              <div style="font-size:13px;font-weight:700;color:${THEME.primary};margin-bottom:2px;">${s.title}</div>
-              <div style="font-size:12px;color:#666;line-height:1.6;">${s.desc}</div>
-            </div>
-          </div>
-        `).join('')}
-      </div>
-      <div id="trinet-status" style="font-size:12px;color:#888;margin-top:12px;"></div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Documents to Upload / Have Ready</div>
-      <p style="font-size:13px;color:#666;margin-bottom:14px;">Upload these in TriNet under <strong>My Profile → Documents</strong> or provide to P&C directly. Check each one off as you complete it.</p>
-      <div style="display:flex;flex-direction:column;gap:8px;" id="doc-upload-list">
-        ${docUploads.map(d => `
-          <div style="background:white;border:1px solid #e8e8e8;border-radius:10px;padding:12px 16px;display:flex;align-items:flex-start;gap:14px;" id="doc-row-${d.id}">
-            <input type="checkbox" id="${d.id}" ${(state.docChecks && state.docChecks[d.id]) ? 'checked' : ''} style="width:18px;height:18px;accent-color:${THEME.primary};flex-shrink:0;margin-top:2px;cursor:pointer;">
-            <div>
-              <div style="font-size:13px;font-weight:700;color:${THEME.primary};">${d.label}</div>
-              <div style="font-size:11px;color:#888;margin-top:2px;">${d.note}</div>
-            </div>
-          </div>
-        `).join('')}
-      </div>
-      <div id="doc-upload-status" style="font-size:12px;color:#888;margin-top:12px;"></div>
-    </div>
-
-    <div class="info-box">
-      <strong>Need help with TriNet?</strong> Contact P&C at
-      <a href="mailto:devanne.bourcier@awellnessacademy.com" style="color:${THEME.primary};font-weight:700;">devanne.bourcier@awellnessacademy.com</a> or
-      <a href="mailto:rubi.nasser@awellnessacademy.com" style="color:${THEME.primary};font-weight:700;">rubi.nasser@awellnessacademy.com</a>.
-      TriNet also has a support line at 1-800-638-0461.
-    </div>
-
-    <button class="continue-btn" id="mod8-continue">Continue to Your Journey →</button>
-  `;
-
-  function updateTrinetStatus() {
-    const boxes = document.querySelectorAll('#trinet-checklist input[type="checkbox"]');
-    boxes.forEach(box => { state.trinetChecks[box.id] = box.checked; });
-    const checked = Array.from(boxes).filter(b => b.checked).length;
-    const el = document.getElementById('trinet-status');
-    el.textContent = checked === boxes.length ? 'All steps completed!' : `${checked} of ${boxes.length} steps completed`;
-    el.style.color = checked === boxes.length ? '#2e7d32' : '#888';
-  }
-
-  document.querySelectorAll('#trinet-checklist input').forEach(b => b.addEventListener('change', updateTrinetStatus));
-  updateTrinetStatus();
-
-  function updateDocStatus() {
-    const boxes = document.querySelectorAll('#doc-upload-list input[type="checkbox"]');
-    boxes.forEach(box => { state.docChecks[box.id] = box.checked; });
-    const checked = Array.from(boxes).filter(b => b.checked).length;
-    const el = document.getElementById('doc-upload-status');
-    el.textContent = checked === boxes.length ? 'All documents handled!' : `${checked} of ${boxes.length} completed`;
-    el.style.color = checked === boxes.length ? '#2e7d32' : '#888';
-  }
-  document.querySelectorAll('#doc-upload-list input').forEach(b => b.addEventListener('change', updateDocStatus));
-  updateDocStatus();
-
-  document.getElementById('mod8-continue').addEventListener('click', onComplete);
-}
-
-</script>
-  <script>
 function renderModule9(state, onComplete, openModal) {
   const content = document.getElementById('content');
   const isPRC = THEME.name === 'PRC';
   const companyLabel = isPRC ? 'PRC' : 'AWA';
 
   const milestones = [
-    { day: 'Day 1', desc: 'Orientation complete · System access set up · Meet your team · TriNet + Outlook configured' },
+    { day: 'Day 1', desc: 'Orientation complete · System access set up · Meet your team · Outlook configured' },
     { day: 'Day 30', desc: 'Comfortable in your role · All required trainings scheduled or completed · First supervisor check-in' },
     { day: 'Day 45', desc: 'Contributing independently · Raise any HR questions with P&C' },
     { day: 'Day 90', desc: `Full performance expectations · 90-day review with your supervisor · Benefits eligibility begins · 401(k) eligibility begins` },
@@ -2479,13 +2364,6 @@ function renderModule9(state, onComplete, openModal) {
     <div class="card">
       <div class="card-title">Your Org Chart</div>
       <p style="font-size:13px;color:#666;margin-bottom:10px;">Click any role to view the job description.</p>
-      <div style="background:#f8f9ff;border-radius:10px;padding:12px 16px;border-left:4px solid ${THEME.accent};margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
-        <div>
-          <div style="font-size:13px;font-weight:700;color:${THEME.primary};">View Live Org Chart on TriNet</div>
-          <div style="font-size:11px;color:#666;margin-top:2px;">Log in to TriNet → People → Org Chart to see the live company org chart</div>
-        </div>
-        <a href="https://www.trinet.com" target="_blank" rel="noopener" style="background:${THEME.primary};color:${THEME.accent};font-weight:700;font-size:12px;text-decoration:none;padding:8px 14px;border-radius:8px;white-space:nowrap;">Open TriNet →</a>
-      </div>
       <div id="orgchart-container">
         ${renderPRCOrgChart()}
       </div>
@@ -2494,13 +2372,6 @@ function renderModule9(state, onComplete, openModal) {
     <div class="card">
       <div class="card-title">Your Facility Org Chart</div>
       <p style="font-size:13px;color:#666;margin-bottom:10px;">Select your location to view the reporting structure. Click any role to view the job description.</p>
-      <div style="background:#f8f9ff;border-radius:10px;padding:12px 16px;border-left:4px solid ${THEME.accent};margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
-        <div>
-          <div style="font-size:13px;font-weight:700;color:${THEME.primary};">View Live Org Chart on TriNet</div>
-          <div style="font-size:11px;color:#666;margin-top:2px;">Log in to TriNet → People → Org Chart to see the live company org chart</div>
-        </div>
-        <a href="https://www.trinet.com" target="_blank" rel="noopener" style="background:${THEME.primary};color:${THEME.accent};font-weight:700;font-size:12px;text-decoration:none;padding:8px 14px;border-radius:8px;white-space:nowrap;">Open TriNet →</a>
-      </div>
       <div class="loc-selector" id="org-loc-selector">
         <button class="loc-btn ${state.location==='AWA Kendall'?'active':''}" data-loc="AWA Kendall">AWA Kendall</button>
         <button class="loc-btn ${state.location==='AWA Davie'?'active':''}" data-loc="AWA Davie">AWA Davie</button>
@@ -2513,7 +2384,7 @@ function renderModule9(state, onComplete, openModal) {
   `;
 
   content.innerHTML = `
-    <div class="module-tag">Module 9 of 9 · Your Journey</div>
+    <div class="module-tag">Module 8 of 8 · Your Journey</div>
     <div class="module-title">Your Journey at ${companyLabel}</div>
     <div class="module-subtitle">You're almost done! Here's what your first 90 days look like — and your facility's org chart.</div>
     <div class="awa-brand-strip"><img src="${THEME.logoSrc}" alt="${THEME.name}" class="awa-brand-logo"><span class="awa-brand-label">${THEME.fullName}</span></div>
@@ -2887,7 +2758,7 @@ function renderCertificate(state) {
 
     <div class="info-box" style="margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto;">
       <strong>What's next?</strong><br>
-      Your manager will reach out to schedule your first 1:1. In the meantime, make sure you've set up TriNet and Outlook. Questions? Reach out to P&C any time.
+      Your manager will reach out to schedule your first 1:1. In the meantime, make sure you've set up Outlook. Questions? Reach out to P&C any time.
     </div>
 
     <div id="cert-submit-card" style="margin-top:16px;max-width:600px;margin-left:auto;margin-right:auto;background:white;border:2px solid #e0e6ff;border-radius:12px;padding:20px 22px;">
@@ -2900,22 +2771,6 @@ function renderCertificate(state) {
       <div id="cert-submit-status" style="margin-top:10px;font-size:12px;display:none;"></div>
     </div>
 
-    <div style="margin-top:16px;max-width:600px;margin-left:auto;margin-right:auto;background:${THEME.lightBg};border:1px solid ${THEME.lightBorder};border-left:4px solid ${THEME.primary};border-radius:10px;padding:18px 20px;">
-      <div style="font-size:14px;font-weight:900;color:${THEME.primary};margin-bottom:8px;">Your Bayside Trainings Are Next</div>
-      <p style="font-size:13px;color:#555;margin:0 0 12px;line-height:1.6;">
-        Now that you've completed your People & Culture Orientation, it's time to move on to your required compliance trainings through <strong>Bayside CEU</strong>. Check your email for your access credentials, then log in to get started.
-      </p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <a href="https://baysideceu.com/" target="_blank" rel="noopener" style="
-          display:inline-block;background:${THEME.primary};color:${THEME.accent};
-          font-size:13px;font-weight:700;text-decoration:none;
-          padding:9px 18px;border-radius:8px;white-space:nowrap;
-        ">Log in to Bayside →</a>
-        <div style="font-size:12px;color:#777;display:flex;align-items:center;line-height:1.4;">
-          Don't see the email? Check your spam folder or contact P&C.
-        </div>
-      </div>
-    </div>
   `;
 
   // Submit completion record
@@ -3415,7 +3270,7 @@ function initAdmin() {
 </script>
   <script>
 const STORAGE_KEY = 'awa_onboarding_v1';
-const TOTAL_MODULES = 9;
+const TOTAL_MODULES = 8;
 
 function createState() {
   return {
@@ -3494,7 +3349,6 @@ if (typeof window !== 'undefined') {
         { name: 'Your Benefits',        icon: '💰' },
         { name: 'Our Policies',         icon: '📋' },
         { name: 'Systems & Tools',      icon: '🛠️' },
-        { name: 'Your TriNet Profile',  icon: '👤' },
         { name: 'Your Journey',         icon: '🚀' },
       ];
     }
@@ -3506,7 +3360,6 @@ if (typeof window !== 'undefined') {
       { name: 'Your Benefits',        icon: '💰' },
       { name: 'Our Policies',         icon: '📋' },
       { name: 'Systems & Tools',      icon: '🛠️' },
-      { name: 'Your TriNet Profile',  icon: '👤' },
       { name: 'Your Journey',         icon: '🚀' },
     ];
   }
@@ -3601,7 +3454,7 @@ if (typeof window !== 'undefined') {
   function renderCurrentModule() {
     const renders = [
       renderModule1, renderModule2, renderModule3, renderModule4,
-      renderModule5, renderModule6, renderModule7, renderModule8, renderModule9,
+      renderModule5, renderModule6, renderModule7, renderModule9,
     ];
     renders[state.currentModule](state, markCurrentModuleComplete, openModal);
   }
